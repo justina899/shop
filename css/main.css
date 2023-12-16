@@ -1,0 +1,59 @@
+body {
+    font-family: 'Hanken Grotesk';font-size: 16px;
+}
+
+.btn-primary {
+    --bs-btn-bg: #73a3e9;
+}
+
+.btn-success {
+    --bs-btn-bg: #83e0b5;
+}
+
+.btn-danger {
+    --bs-btn-bg: #ee7b87;
+}
+
+.card-title, h5{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* .card-text p{
+    height: 300px;
+    width: 200px;
+    max-height:90%; 
+    max-width:90%;
+    margin:auto;
+} */
+
+.card-body:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.card{
+    --bs-card-border-color:none;
+}
+
+.btn {
+    --bs-btn-padding-x: 0.5rem;
+    --bs-btn-padding-y: 0.2rem;
+}
+.card-img-top{
+    height: 200px;
+    width: 250px;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.card-text{
+    height: 150px;
+    text-align: justify;
+    /* word-wrap: break-word; */
+    word-break: break-all;
+}
+
+.card-title-ref, .card-img-ref{
+    color: black;
+    text-decoration: none;
+}
