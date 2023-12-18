@@ -53,6 +53,6 @@ include_once "../components/head.php";
         </div>
     </div>
 
-</body>
-
-</html>
+    <?php
+include "../components/footer.php";
+?>
