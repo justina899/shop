@@ -53,7 +53,11 @@ body {
     word-break: break-all;
 }
 
-.card-title-ref, .card-img-ref{
+a.card-title-ref a.card-img-ref{
     color: black;
     text-decoration: none;
+}
+a {
+    color: black;
+    text-decoration: none; 
 }

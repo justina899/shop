@@ -9,8 +9,8 @@ public static function getAll() {
 }
 
 public static function find($id){
-    $author = Category::find($id);
-    return $author;
+    $category = Category::find($id);
+    return $category;
 }
 
 public static function store() {

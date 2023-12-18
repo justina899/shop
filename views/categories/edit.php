@@ -12,6 +12,7 @@ if (!isset($_GET['id'])) {
 }
 
 $category = CategoryController::find($_GET['id']);
+
 // print_r($author);die;
 ?>
 <!DOCTYPE html>
