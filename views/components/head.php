@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,3 +58,7 @@
                 </form>
             </div>
         </nav>
+
+        <?php
+        include_once "../components/messages.php";
+        ?>

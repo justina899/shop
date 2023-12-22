@@ -1,19 +1,23 @@
 <?php
+include_once "../components/init.php";
 include "../../Controllers/CategoryController.php";
 
-//jei atejai su post, atnaujinam irasa, ir redirectinam i index.php
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    CategoryController::update($_POST['id']);
-    header("Location: ./index.php");
+    if(CategoryController::update($_POST['id'])){
+        $_SESSION['success'] = "kategorija atnaujinta";
+        header("Location: ./index.php");
+        die;
+    }
+    
 }
-
+//print_r($_GET['id']); die;
 if (!isset($_GET['id'])) {
-    header("Location: ./index.php");
+    header("Location: ./index.php");  die;
 }
 
-$category = CategoryController::find($_GET['id']);
+$category = CategoryController::find($_GET['id']);//print_r($category);die;
 
-// print_r($author);die;
+
 include_once "../components/head.php";
 ?>
 

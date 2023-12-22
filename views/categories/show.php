@@ -1,4 +1,6 @@
 <?php
+include_once "../components/init.php";
+
 if (!isset($_GET['id'])) {
     header("Location: ./index.php");
 }
