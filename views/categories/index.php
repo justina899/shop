@@ -18,17 +18,7 @@ include_once "../components/head.php";
     <h1>Prekių kategorijos</h1>
     <a class="btn btn-success" href="./create.php">create new category</a>
     <a class="btn btn-primary" href="../items/index.php">Pamatyti prekių sąrašą</a>
-
-    <!-- <form method="get">
-        <select class="sort" name="filter-by">
-            <option value="">Rūšiuoti</option>
-            <option value="">Pigiausi viršuje</option>
-            <option value="">Brangiausi viršuje</option>
-        </select>
-    </form> -->
-
     
-
     <?php foreach ($categories as $key => $category) {
         if ($key % 4 == 0) { ?>
             <div class="row">

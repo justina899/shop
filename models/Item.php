@@ -92,5 +92,76 @@ public static function all()
         $stmt->execute();
         $db->close();
     }
+
+    public static function getFilterParams()
+    {
+        $params = [];
+        $db = new mysqli("localhost", "root", "", "web_11_23_shop");
+        $query = "SELECT DISTINCT `category_id` FROM `items`";
+        $result = $db->query($query);
+
+        while($row = $result->fetch_assoc()){
+            $params[] = $row['category_id'];
+        }
+        $db->close();
+        return $params;
+    }
+
+    public static function filter()
+    {
+        $items = [];
+        $db = new mysqli("localhost", "root", "", "web_11_23_shop");
+        $query = "SELECT * FROM `items`";
+        $first = true;
+        if($_GET['filter'] != ""){
+            $first = false;
+            $query .= "WHERE `category_id` = " . "'". $_GET['filter'] . "'" . " ";
+        }
+
+        if($_GET['from'] != ""){
+            $query .= (($first)? "WHERE" : "AND") ." `price` >= " . $_GET['from'] . " ";
+            $first = false;
+            
+        }
+
+        if($_GET['to'] != ""){
+            $query .= (($first)? "WHERE" : "AND") ." `price` <= " . $_GET['to'] . " ";
+            $first = false;
+            
+        }
+
+        switch($_GET['sort']){
+            case '1':
+                $query .= "ORDER by `price`";
+                break;
+            case '2':
+                $query .= "ORDER by `price` DESC";
+                break;
+        }
+        // echo $query;
+        // die;
+        $result = $db->query($query);
+        while($row = $result->fetch_assoc()){
+            $items[] = new Item($row['id'], $row['title'], $row['price'], $row['description'], $row['photo'], $row['category_id']);
+        }
+        
+        $db->close(); 
+        return $items;
+    }
+
+    public static function search(){
+        $items = [];
+        $db = new mysqli("localhost", "root", "", "web_11_23_shop");
+        $query = "SELECT * FROM `items` where `title` like \"%" . $_GET['search'] . "%\""; 
+        $result = $db->query($query);
+    
+        while($row = $result->fetch_assoc()){
+            $items[] = new Item($row['id'], $row['title'], $row['price'], $row['description'], $row['photo'], $row['category_id']);
+        }
+        $db->close();
+        return $items;
+    }
+
+
 }
 ?>

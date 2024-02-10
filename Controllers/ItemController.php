@@ -44,6 +44,23 @@ class ItemController
     {
         Item::destroy($id);
     }
+
+    public static function getfilterParams()
+    {
+        return Item::getFilterParams();
+    }
+
+    public static function filter()
+    {
+        return Item::filter();
+    }
+
+    public static function search()
+    {
+        return Item::search();
+    }
+
+
 }
 
 ?>
