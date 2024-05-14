@@ -11,6 +11,10 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Quicksand:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -18,7 +22,10 @@
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../index.php">Home</a>
+                <a class="navbar-brand" href="../../index.php">
+                    <img src="../../SVG_icons/jewelry-stone.svg" height="40px" width="40px"/>
+                    <span class="brand-name" style="font-family: 'Dancing Script', cursive">Our jewelry</span>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

@@ -1,5 +1,16 @@
-body {
-    font-family: 'Hanken Grotesk';font-size: 16px;
+* {
+    font-family: 'Hanken Grotesk'; font-size: 16px;
+}
+
+.dancing-script-use {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.brand-name {
+    font-size: 14px;
 }
 
 .btn-primary {
